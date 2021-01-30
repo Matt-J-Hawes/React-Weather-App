@@ -52,9 +52,9 @@ class App extends Component {
 	  return (
 	    <div className="App">
 	      <Header />
-	      <form onSubmit={e => this.getNewDestination(e)}>
+	      <form onSubmit= {e => this.getNewDestination(e)}>
 	      	<input ref = {input => this.newPlace = input} type="text" placeholder="Amsterdam..."></input>
-	      	<button onClick={e => this.getNewDestination(e)}>&#x1F50D;</button>
+	      	<button onClick= {e => this.getNewDestination(e)}>&#x1F50D;</button>
 	      </form>
 	      <Temperature 
 	         tempCelcius = {this.state.tempCelcius}
