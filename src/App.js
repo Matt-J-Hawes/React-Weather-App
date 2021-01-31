@@ -13,6 +13,10 @@ class App extends Component {
     state = {
     	tempCelcius: [],
     	tempFahrenheit: [],
+    	celciusMax: [],
+    	celciusMin: [],
+    	fahreMin: [],
+    	fahreMax: [],
     	wind: [],
     	weather: [],
     	city: '',
@@ -29,6 +33,10 @@ class App extends Component {
               this.setState({
               	  tempCelcius: Number.parseFloat(res.data.main.temp - 273.15).toFixed(1),
               	  tempFahrenheit: Number.parseFloat((res.data.main.temp - 273.15) * 9/5 + 32).toFixed(1),
+              	  celciusMax: Number.parseFloat(res.data.main.temp_max - 273.15).toFixed(1),
+              	  celciusMin: Number.parseFloat(res.data.main.temp_min - 273.15).toFixed(1),
+              	  fahreMax:  Number.parseFloat((res.data.main.temp_max - 273.15) * 9/5 + 32).toFixed(1),
+              	  fahreMin:  Number.parseFloat((res.data.main.temp_min - 273.15) * 9/5 + 32).toFixed(1),
               	  wind: res.data.wind.speed,
               	  weather: res.data.weather[0].main,
               	  city: res.data.name
@@ -59,6 +67,10 @@ class App extends Component {
 	      <Temperature 
 	         tempCelcius = {this.state.tempCelcius}
 	         tempFahrenheit = {this.state.tempFahrenheit}
+	         celciusMin = {this.state.celciusMin}
+	         celciusMax = {this.state.celciusMax}
+	         fahreMin = {this.state.fahreMin}
+	         fahreMax = {this.state.fahreMax}
 	         desc = {this.state.weather}
 	         wind = {this.state.wind}
 	         city = {this.state.city}

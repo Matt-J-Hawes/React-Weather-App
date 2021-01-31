@@ -13,6 +13,10 @@ import snow from '../images/snow.png'
 const Temperature = (props) => {
     const tempCelcius = props.tempCelcius
     const tempFahrenheit = props.tempFahrenheit
+    const celciusMax = props.celciusMax
+    const celciusMin = props.celciusMin
+    const fahreMin = props.fahreMin
+    const fahreMax = props.fahreMax
     const desc = props.desc
     const wind = props.wind
     const city = props.city
@@ -28,6 +32,10 @@ const Temperature = (props) => {
        	     	<h2>{tempCelcius}°C<span className = 'degrees'>|°F</span></h2> : 
        	     	<h2>{tempFahrenheit}°F <span className = 'degrees'>|°C</span></h2>}
        	 </div>
+       	     {isOn ? 
+                <p className = "min_max">{celciusMin}°C / {celciusMax}°C</p> :
+                <p className = "min_max">{fahreMin}°F / {fahreMax}°F</p>
+       	     }
        	 <div className = "weather_images">
 	       	 {desc.includes('Clouds')  ? 
 	       	 <img className = "clouds" src={clouds} alt="clouds"/> 
@@ -40,7 +48,7 @@ const Temperature = (props) => {
 	       	 : null }
 	       	 {tempCelcius >= 20 ? 
 	       	 <img src={sun} alt="sun" />
-	       	 :null }
+	       	 : null }
        	 </div>
        	   <hr/>
        	   <p>The current wind speed in <span> {city} </span> is <span>{wind} mph </span></p>
