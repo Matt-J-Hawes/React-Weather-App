@@ -40,14 +40,15 @@ h2{
   font-size:5em;
   font-weight: 500;
   cursor: pointer;
-  margin-left: 20px
+  margin-left: 20px;
+  margin-top: 60px;
 
 }
 
 h3{
   font-size: 3em;
   letter-spacing: 2px;
-  font-weight: 100
+  font-weight: 100;
 }
 
 .degrees {
