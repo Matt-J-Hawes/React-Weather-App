@@ -4,7 +4,8 @@ import Umbrella from '../images/umbrella.png'
 const ErrorMessage = () => {
 	return(
 		<div className = "error">
-		  We could not find that location! Please try again...
+		  <p className = "error_p">We could not find that location! Please try again...</p>
+		  <hr />
 		 <img className = "error_img" src={Umbrella} alt = 'Not Found'/>
 		</div>
 	);

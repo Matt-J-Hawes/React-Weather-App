@@ -121,6 +121,12 @@ span{
   margin-top: 60px;
 }
 
+.error_p {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 200
+}
+
 /**********  Loading cursor **********/
 .loading {
   display: flex;
